@@ -146,5 +146,25 @@ async function loadSchedule() {
     console.log('Schedule loaded from fallback data');
 }
 
+// Auto-refresh every 2 minutes
+setInterval(async () => {
+    try {
+        const url = GOOGLE_SHEETS_CSV_URL + '&_t=' + Date.now();
+        const response = await fetch(url);
+        if (response.ok) {
+            const text = await response.text();
+            const rows = parseCSV(text);
+            const data = rows.slice(1).map(row => [
+                row[0] || '', row[1] || '', row[2] || '', row[3] || ''
+            ]);
+            if (data.length > 0) {
+                renderSchedule(data);
+            }
+        }
+    } catch (err) {
+        // Silently ignore — will retry next interval
+    }
+}, 2 * 60 * 1000);
+
 // Init on page load
 document.addEventListener('DOMContentLoaded', loadSchedule);
