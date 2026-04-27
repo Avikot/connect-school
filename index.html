@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONNECT: Лідерство без кордонів</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ════ COVER ════ -->
+    <section class="cover">
+        <div class="cover-bg-circles">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+            <div class="circle circle-4"></div>
+        </div>
+        <div class="cover-content">
+            <div class="logo-wrapper">
+                <img src="assets/logo.png" alt="Логотип" class="logo">
+            </div>
+            <p class="school-label">ШКОЛА ЛІДЕРІВ</p>
+            <h1 class="title">CONNECT:</h1>
+            <p class="subtitle">Лідерство без кордонів</p>
+            <div class="divider">
+                <span class="line"></span>
+                <span class="diamond">◆</span>
+                <span class="line"></span>
+            </div>
+            <p class="org-name">обласної ради старшокласників Рівненщини</p>
+        </div>
+        <div class="cover-bottom">
+            <div class="date">30 квітня 2026</div>
+            <div class="cover-divider-line"></div>
+            <div class="location">с. Велика Омеляна &bull; вул. Шевченка 74</div>
+            <div class="dots">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ SCHEDULE ════ -->
+    <section class="schedule-section">
+        <div class="schedule-header">
+            <h2>ПРОГРАМА</h2>
+            <p>Школи лідерів</p>
+        </div>
+        <div class="lavender-accent"></div>
+
+        <div class="schedule-table-wrapper">
+            <table class="schedule-table" id="scheduleTable">
+                <thead>
+                    <tr>
+                        <th class="col-time">ЧАС</th>
+                        <th class="col-event">ЗАХІД</th>
+                        <th class="col-mod">МОДЕРАТОР</th>
+                        <th class="col-loc">МІСЦЕ</th>
+                    </tr>
+                </thead>
+                <tbody id="scheduleBody">
+                    <!-- Filled by JS from Google Sheets or fallback data -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Quote card -->
+        <div class="quote-card">
+            <p class="quote-text">"Лідерство — це не посада.<br>Це рішення робити вплив."</p>
+            <div class="quote-diamond">◆</div>
+            <p class="quote-hashtag">#CONNECTЛідерство</p>
+        </div>
+    </section>
+
+    <!-- ════ BACK COVER ════ -->
+    <section class="back-cover">
+        <div class="back-bg-circles">
+            <div class="circle circle-b1"></div>
+            <div class="circle circle-b2"></div>
+            <div class="circle circle-b3"></div>
+        </div>
+        <div class="back-watermark">CONNECT</div>
+        <div class="back-content">
+            <div class="back-logo-wrapper">
+                <img src="assets/logo.png" alt="Логотип" class="back-logo">
+            </div>
+            <h3 class="contacts-title">КОНТАКТИ</h3>
+            <div class="contacts-divider"></div>
+            <p class="contacts-org">Обласна рада старшокласників Рівненщини</p>
+            <p class="contacts-kz">КЗ «Центр національно-патріотичного<br>виховання та позашкільної освіти» РОР</p>
+            <p class="contacts-address">с. Велика Омеляна, вул. Шевченка 74</p>
+            <div class="qr-section">
+                <div class="qr-item">
+                    <img src="assets/qr_instagram.png" alt="QR Рада старшокласників" class="qr-code">
+                    <span>Рада старшокласників</span>
+                </div>
+                <div class="qr-item">
+                    <img src="assets/qr_facebook.png" alt="QR Великоомелянський ліцей" class="qr-code">
+                    <span>Великоомелянський ліцей</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
