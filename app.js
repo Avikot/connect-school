@@ -6,7 +6,7 @@
 // ══════════════════════════════════════════════════════════════════
 // CONFIGURATION — Paste your published Google Sheets CSV URL here
 // ══════════════════════════════════════════════════════════════════
-const GOOGLE_SHEETS_CSV_URL = '';
+const GOOGLE_SHEETS_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSkcYFPkMRQValmufOP245kizOevF-8Kry2ZO9FaTn7Z4wYp7p7o8yIcNpx4LcrwPyyt9IaCeQyoeBZ/pub?output=csv';
 // Example: 'https://docs.google.com/spreadsheets/d/e/2PACX-xxxxx/pub?output=csv'
 
 // ══════════════════════════════════════════════════════════════════
