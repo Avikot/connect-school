@@ -146,31 +146,5 @@ async function loadSchedule() {
     console.log('Schedule loaded from fallback data');
 }
 
-// Refresh button handler
-async function refreshSchedule() {
-    const btn = document.getElementById('refreshBtn');
-    btn.classList.add('loading');
-    btn.textContent = '⏳ Оновлення...';
-    // Add cache-busting param to bypass Google Sheets cache
-    const url = GOOGLE_SHEETS_CSV_URL + '&_t=' + Date.now();
-    try {
-        const response = await fetch(url);
-        if (response.ok) {
-            const text = await response.text();
-            const rows = parseCSV(text);
-            const data = rows.slice(1).map(row => [
-                row[0] || '', row[1] || '', row[2] || '', row[3] || ''
-            ]);
-            if (data.length > 0) {
-                renderSchedule(data);
-            }
-        }
-    } catch (err) {
-        console.warn('Refresh failed:', err);
-    }
-    btn.classList.remove('loading');
-    btn.innerHTML = '&#x21bb; Оновити програму';
-}
-
 // Init on page load
 document.addEventListener('DOMContentLoaded', loadSchedule);

@@ -245,35 +245,6 @@ body {
     background: var(--lavender);
 }
 
-/* Refresh button */
-.refresh-bar {
-    text-align: right;
-    padding: 8px 4px;
-}
-
-#refreshBtn {
-    background: var(--ultra-light);
-    border: 1px solid var(--lavender);
-    color: var(--accent-purple);
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 6px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-#refreshBtn:hover {
-    background: var(--light-lav);
-    border-color: var(--accent-purple);
-}
-
-#refreshBtn.loading {
-    opacity: 0.6;
-    pointer-events: none;
-}
-
 .schedule-table-wrapper {
     overflow-x: auto;
 }
